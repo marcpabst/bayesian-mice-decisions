@@ -15,10 +15,13 @@ jobs:
           # this will also include README.md
           echo "::set-output name=files::$(printf '"%s" ' *.md)"
 
-      - uses: docker://pandoc/latex:2.9
-        with:
-          args: --output=output/result.pdf ${{ steps.files_list.outputs.files }}
+
           
+      - name: run loop
+        env:
+          FILES:  ${{ steps.files_list.outputs.files }}
+        run: for f in $FILES; do docker run -it --rm -v $PWD:/work -w /work pandoc/latex pandoc $f --output=output/result.pdf; done
+
       - name: update file and push to remote    
         run: |
                   echo "Test push commit to the remote in the workflow" >> test.txt
