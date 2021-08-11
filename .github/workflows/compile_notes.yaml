@@ -8,10 +8,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        run: cd notes
       - name: install
         run: npm install
       - name: compile
-        run: node notes/render-math.js background.md -o background_rendered.md
+        run: node render-math.js background.md -o background_rendered.md
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "[Workflow] Re-compiled README.md"

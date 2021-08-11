@@ -5,6 +5,7 @@ The purpose of this note is to establish the theoretical basis for extending the
 ## The Model
 
 
+
 ### Observation Model
 
 We assume that observations are generated from a $Bernoulli(p)$ distribution with the probability $p$ given by
