@@ -1,9 +1,8 @@
-# Mathematical Methods
+# Mathematical Background
 
 The purpose of this note is to establish the theoretical basis for extending the work by Ashwood et al. I will first highlight the mathematical model of the hidden Markov model (HMM) used and then briefly cover the reasoning behind using (approximate) leave-one-out cross-validation to obtain the pointwise predictive probability to compare different models as opposed to normalized likelihoods in the case of Ashwood et al.
 
 ## The Model
-
 
 ### Observation Model
 

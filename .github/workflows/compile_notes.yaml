@@ -9,11 +9,6 @@ jobs:
       - name: create file list
         id: files_list
         run: |
-          echo "Lorem ipsum" > lorem_1.md  # create two example files
-          echo "dolor sit amet" > lorem_2.md
-          mkdir -p output  # create output dir
-          cd notes
-          # this will also include README.md
           echo "::set-output name=files::$(printf '%s ' *.md)"
 
 
@@ -23,8 +18,6 @@ jobs:
 
       - name: update file and push to remote    
         run: |
-                  echo "Test push commit to the remote in the workflow" >> test.txt
-
                   git config --global user.name "github-actions[bot]"
                   git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
