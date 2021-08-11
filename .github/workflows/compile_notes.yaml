@@ -12,9 +12,9 @@ jobs:
 
       - uses: docker://pandoc/latex:2.9
         with:
-          args: --output=result.pdf ${{ steps.files_list.outputs.files }}
+          args: --output=notes/result.pdf ${{ steps.files_list.outputs.files }}
           
       - uses: actions/upload-artifact@master
         with:
-          name: output
-          path: output
+          name: notes
+          path: notes
