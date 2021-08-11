@@ -12,13 +12,14 @@ jobs:
           echo "Lorem ipsum" > lorem_1.md  # create two example files
           echo "dolor sit amet" > lorem_2.md
           mkdir -p output  # create output dir
+          cd notes
           # this will also include README.md
           echo "::set-output name=files::$(printf '%s ' *.md)"
 
 
           
       - name: run loop
-        run: for f in ${{ steps.files_list.outputs.files }}; do docker run --rm --volume "`pwd`:/data" --user `id -u`:`id -g` pandoc/latex:2.6 $f --output=$f.pdf; done
+        run: cd notes && for f in ${{ steps.files_list.outputs.files }}; do docker run --rm --volume "`pwd`:/data" --user `id -u`:`id -g` pandoc/latex:2.6 $f --output=$f.pdf; done
 
       - name: update file and push to remote    
         run: |
