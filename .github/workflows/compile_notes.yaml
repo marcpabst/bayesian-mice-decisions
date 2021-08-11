@@ -1,17 +1,23 @@
-name: compile notes
-on:
-  push:
-    paths:
-      - notes/background.md
+name: Advanced Usage
+
+on: push
+
 jobs:
-  compile_readme:
-    runs-on: ubuntu-latest
+  convert_via_pandoc
+    runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
-      - name: install
-        run: cd notes && npm install
-      - name: compile
-        run: cd notes && node render-math.js background.md -o background_rendered.md
-      - uses: stefanzweifel/git-auto-commit-action@v4
+
+      - name: create file list
+        id: files_list
+        run: |
+          echo "::set-output name=files::$(printf '"%s" ' *.md)"
+
+      - uses: docker://pandoc/latex:2.9
         with:
-          commit_message: "[Workflow] Re-compiled README.md"
+          args: --output=output/result.pdf ${{ steps.files_list.outputs.files }}
+          
+      - uses: actions/upload-artifact@master
+        with:
+          name: output
+          path: output
