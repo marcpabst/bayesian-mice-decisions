@@ -18,9 +18,7 @@ jobs:
 
           
       - name: run loop
-        env:
-          FILES:  ${{ steps.files_list.outputs.files }}
-        run: for f in $FILES; do docker run -it --rm -v $PWD:/work -w /work pandoc/latex pandoc $f --output=output/result.pdf; done
+        run: for f in ${{ steps.files_list.outputs.files }}; do docker run -it --rm -v $PWD:/work -w /work pandoc/latex pandoc $f --output=output/result.pdf; done
 
       - name: update file and push to remote    
         run: |
