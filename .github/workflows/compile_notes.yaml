@@ -1,17 +1,14 @@
 name: Advanced Usage
-
 on: push
-
 jobs:
-  convert_via_pandoc
+  convert_via_pandoc:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
 
       - name: create file list
         id: files_list
-        run: |
-          echo "::set-output name=files::$(printf '"%s" ' *.md)"
+        run: echo "::set-output name=files::$(printf '"%s" ' *.md)"
 
       - uses: docker://pandoc/latex:2.9
         with:
