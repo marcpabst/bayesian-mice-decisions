@@ -18,7 +18,8 @@ $$b_j(t) = \operatorname{Pr}\left(y_t \mid z_t=j\right)$$
 
 Using the probability mass function of the Bernoulli distribution, we can write the observation model as
 
-$$ b_j(t) =
+$$ 
+b_j(t) =
 \begin{cases}
    \frac{1}{1+\exp \left( u_{t} \gamma_{j}^\top\right)} & \text{if } y_t =1, \\
    1-\frac{1}{1+\exp \left( u_{t} \gamma_{j}^\top\right)} & \text {if } y_t = 0.
@@ -28,7 +29,7 @@ $$
 ### Transition Model
 The time-varying transition matrix $\mathbf{A}(t)\in \mathbb{R}_+^{K\times K}$ is given by
 
-$$a_{i,j}(t) = \operatorname{Pr}(z_t = j |z_{t-1} = i, \vec{u}_t)  = \operatorname{softmax}\left(d_{i,j} + u_t \beta_i^\top  \right) = \frac{\exp\left(d_{i,j} + u_t \beta_i^\top  \right)}{\sum_{k=1}^{i} \exp \left(d_{i,j} + u_t \beta_i^\top  \right)}$$
+$$ a_{i,j}(t) = \operatorname{Pr}(z_t = j |z_{t-1} = i, \vec{u}_t) = \operatorname{softmax}\left(d_{i,j} + u_t \beta_i^\top  \right) = \frac{\exp\left(d_{i,j} + u_t \beta_i^\top  \right)}{\sum_{k=1}^{i} \exp \left(d_{i,j} + u_t \beta_i^\top \right)}$$
 
 In other words, for each of the $K$ states, a multinomial logistic regression is used to predict the probability of the next possible $K$ states. Importantly, while we allow the intercept to vary between states, the coefficients are fixed and only depend on the previous state ($z_{t-1} = i$).
 
@@ -61,27 +62,3 @@ Markov Chain Monte Carlo (MCMC) procedures such as Gibb's sampling or Hamitonian
 - $K$: Number of different states
 - $P$: Number of predictors for transitions model.
 - $M$: Number of predictors for observation model.
-
-
-## From Likelihood Ratios to elpd-Differences
-
-The likelhood (for categorical outcome variables) of some data $data$ under a model $\mathcal{M_1}$ is given by:
-$$\operatorname{L} = \sum^{N}_{i=1}{} \operatorname{Pr}(y_{i}|\hat \theta_{i},\mathcal{M})$$
-
-The likelhood ratio is the ratio of the likelihoods:
-$$\operatorname{LLR} = \log\left(\frac{\operatorname{L_1}}{\operatorname{L_2}}\right) = \log(\operatorname{L_1}) - \log(\operatorname{L_2})$$
-
-Elpd is the expected log pointwise predictive density (pointwise predictive probabilities in the case of discrete otucomes). Instead of using the fitted value for $\theta$, we intergate over the posterior predivent distribution of $\theta$. If we draw $S$ samples from the posterioir distribution, we can write the elpd as follows:
-
-$$\widehat{\mathrm{elpd}}_{i}=\log \left(\frac{1}{S} \sum_{s=1}^{S} Pr\left(y_{i} \mid \theta_{s}\right)\right)$$
-
-$$\widehat{\mathrm{elpd}}_{\mathrm{full}}=\sum_{i=1}^{N} \widehat{\mathrm{elpd}_{i}}$$
-
-$$\widehat{\operatorname{elpd-diff}}_{full} = \log{\left(\frac{\operatorname{Pr}(data|\theta_1,\mathcal{M_1})}{\operatorname{Pr}(data|X,\mathcal{M_2})}\right)}$$
-
-
-$$\widehat{\operatorname{elpd-diff}}_i = \log{\left(\frac{\operatorname{\exp\left(\widehat{elpd}_1\right)}}{\operatorname{\exp\left(\widehat{elpd}_2\right)}}\right)}$$
-
-Bayes factors on the other hand are obtained by marginalizing over all possible $\theta$. This is eqivivent to averaging over all possible $\theta$ weighted by the prior probability of $\theta$.
-$$\operatorname{BF} = \frac{\operatorname{Pr}(data|\mathcal{M_2})}{\operatorname{Pr}(data|\mathcal{M_1})}$$
-
