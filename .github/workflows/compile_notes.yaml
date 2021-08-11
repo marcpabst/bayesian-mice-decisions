@@ -11,7 +11,7 @@ jobs:
       - name: install
         run: npm install
       - name: compile
-        run: node index.js background.md -o background_rendered.md
+        run: node notes/render_math.js background.md -o background_rendered.md
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "[Workflow] Re-compiled README.md"
