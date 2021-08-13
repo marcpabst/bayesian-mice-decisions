@@ -9,8 +9,8 @@ jobs:
       - name: create file list
         id: files_list
         run: |
+          cd notes
           echo "::set-output name=files::$(printf '%s ' *.md)"
-
 
           
       - name: run loop
@@ -22,5 +22,5 @@ jobs:
                   git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
                   git add -A
-                  git commit -m "Update test.txt"
+                  git commit -m "Update PDFs"
                   git push
