@@ -1,8 +1,6 @@
-# Mathematical Background
+## Mathematical Background
 
 The purpose of this note is to establish the theoretical basis for extending the work by Ashwood et al. I will first highlight the mathematical model of the hidden Markov model (HMM) used and then briefly cover the reasoning behind using (approximate) leave-one-out cross-validation to obtain the pointwise predictive probability to compare different models as opposed to normalized likelihoods in the case of Ashwood et al.
-
-## The Model
 
 ### Observation Model
 
@@ -46,19 +44,3 @@ $$\alpha_{t=1}(i) = \pi_i \cdot b_{i}(1)$$
 The sum over all possible end states at $t$ is sufficient to compute the likelihood of the observation sequence $y_1, \ldots, y_t$.
 
 $$\mathrm{L}(y_1, \ldots, y_t) = \sum_{i=1}^{K} \alpha_{t}(i)$$
-
-
-### Point Estimates
-The forward algoritm can be combined with the so-called backward algorithm to compute the probability of a particular latent state at time $t$ (the process is then fittingly termed forward-backward-algorithm). This information can then be used in an interative procedure known as expectation maximization (EM) to find the maximum likelihood (ML) or maximum a posteriori (MAP) estimate of the observation sequence. EM works by repeatedly finding the most likely state sequence (E-step) and subsequently maximizing the likelihood by adjusting the other parameters (M-step). 
-
-Other options include direct Maximal Likelihood estimation a Variational Bayes estimations.
-
-### Full Baysian Inference
-#### Markov Chain Monte Carlo Sampling
-Markov Chain Monte Carlo (MCMC) procedures such as Gibb's sampling or Hamitonian Monte Carlo (HMC) can be used to sample from the posterior distributions. 
-
-
-
-- $K$: Number of different states
-- $P$: Number of predictors for transitions model.
-- $M$: Number of predictors for observation model.

@@ -17,96 +17,128 @@ using namespace stan::math;
 
 
 stan::math::profile_map profiles__;
-static constexpr std::array<const char*, 89> locations_array__ = 
+static constexpr std::array<const char*, 121> locations_array__ = 
 {" (found before start of program)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 74, column 4 to column 18)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 75, column 4 to column 25)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 77, column 4 to column 24)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 85, column 2 to column 26)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 88, column 4 to column 16)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 91, column 6 to column 20)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 92, column 13 to column 15)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 92, column 17 to column 18)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 92, column 6 to column 49)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 94, column 22 to column 24)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 94, column 13 to column 14)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 94, column 16 to column 17)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 94, column 6 to column 26)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 96, column 13 to column 15)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 96, column 6 to column 35)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 97, column 13 to column 14)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 97, column 16 to column 18)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 97, column 6 to column 26)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 101, column 10 to column 47)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 102, column 10 to column 73)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 100, column 23 to line 103, column 9)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 100, column 8 to line 103, column 9)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 99, column 22 to line 104, column 7)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 99, column 6 to line 104, column 7)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 107, column 6 to column 69)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 109, column 6 to column 21)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 89, column 18 to line 110, column 5)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 89, column 4 to line 110, column 5)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 87, column 2 to line 111, column 3)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 117, column 8 to column 39)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 119, column 8 to column 34)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 116, column 19 to line 120, column 5)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 116, column 4 to line 120, column 5)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 123, column 6 to column 33)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 122, column 18 to line 124, column 5)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 122, column 4 to line 124, column 5)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 59, column 4 to column 21)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 60, column 10 to column 11)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 60, column 4 to column 13)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 62, column 4 to column 21)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 65, column 4 to column 21)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 66, column 4 to column 21)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 67, column 4 to column 21)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 69, column 10 to column 11)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 69, column 4 to column 13)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 70, column 11 to column 12)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 70, column 14 to column 15)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 70, column 4 to column 19)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 74, column 12 to column 13)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 75, column 22 to column 23)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 75, column 11 to column 12)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 77, column 21 to column 22)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 77, column 12 to column 13)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 85, column 9 to column 10)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 58, column 4 to column 18)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 59, column 4 to column 25)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 61, column 4 to column 20)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 68, column 2 to column 26)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 71, column 4 to column 16)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 74, column 6 to column 20)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 75, column 13 to column 15)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 75, column 17 to column 18)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 75, column 6 to column 49)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 77, column 22 to column 24)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 77, column 13 to column 14)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 77, column 16 to column 17)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 77, column 6 to column 26)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 79, column 13 to column 15)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 79, column 6 to column 35)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 80, column 13 to column 14)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 80, column 16 to column 18)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 80, column 6 to column 26)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 84, column 10 to column 43)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 85, column 10 to column 73)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 83, column 23 to line 86, column 9)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 83, column 8 to line 86, column 9)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 82, column 22 to line 87, column 7)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 82, column 6 to line 87, column 7)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 91, column 6 to column 69)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 93, column 6 to column 21)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 72, column 18 to line 94, column 5)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 72, column 4 to line 94, column 5)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 70, column 2 to line 95, column 3)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 113, column 2 to column 15)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 114, column 2 to column 15)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 117, column 4 to column 16)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 120, column 6 to column 20)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 121, column 13 to column 15)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 121, column 17 to column 18)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 121, column 6 to column 49)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 122, column 22 to column 24)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 122, column 13 to column 14)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 122, column 16 to column 17)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 122, column 6 to column 26)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 124, column 13 to column 15)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 124, column 6 to column 35)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 125, column 13 to column 14)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 125, column 16 to column 18)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 125, column 6 to column 26)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 129, column 10 to column 43)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 130, column 10 to column 73)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 128, column 23 to line 131, column 9)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 128, column 8 to line 131, column 9)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 127, column 22 to line 132, column 7)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 127, column 6 to line 132, column 7)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 134, column 6 to column 62)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 138, column 8 to column 78)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 136, column 22 to line 139, column 7)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 136, column 6 to line 139, column 7)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 140, column 6 to column 21)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 118, column 18 to line 141, column 5)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 118, column 4 to line 141, column 5)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 116, column 3 to line 142, column 3)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 101, column 8 to column 45)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 103, column 8 to column 34)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 100, column 19 to line 104, column 5)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 100, column 4 to line 104, column 5)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 107, column 6 to column 33)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 106, column 18 to line 108, column 5)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 106, column 4 to line 108, column 5)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 43, column 4 to column 21)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 44, column 10 to column 11)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 44, column 4 to column 13)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 46, column 4 to column 21)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 49, column 4 to column 21)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 50, column 4 to column 21)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 51, column 4 to column 21)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 53, column 10 to column 11)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 53, column 4 to column 13)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 54, column 11 to column 12)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 54, column 14 to column 15)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 54, column 4 to column 19)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 58, column 12 to column 13)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 59, column 22 to column 23)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 59, column 11 to column 12)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 61, column 17 to column 18)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 61, column 12 to column 13)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 68, column 9 to column 10)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 113, column 12 to column 13)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 114, column 12 to column 13)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 5, column 4 to column 27)",
  " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 6, column 4 to column 27)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 7, column 4 to column 27)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 10, column 22 to column 23)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 10, column 11 to column 12)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 10, column 13 to column 14)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 10, column 4 to column 25)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 11, column 11 to column 12)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 11, column 4 to column 21)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 14, column 6 to column 29)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 18, column 10 to column 41)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 17, column 23 to line 19, column 9)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 17, column 8 to line 19, column 9)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 16, column 21 to line 20, column 7)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 16, column 6 to line 20, column 7)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 13, column 19 to line 21, column 5)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 13, column 4 to line 21, column 5)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 23, column 23 to column 24)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 23, column 11 to column 12)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 23, column 4 to column 26)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 24, column 13 to column 14)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 24, column 4 to column 16)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 27, column 6 to column 47)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 26, column 18 to line 28, column 5)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 26, column 4 to line 28, column 5)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 33, column 10 to column 67)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 32, column 23 to line 34, column 9)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 32, column 8 to line 34, column 9)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 35, column 8 to column 42)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 31, column 21 to line 36, column 7)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 31, column 6 to line 36, column 7)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 30, column 19 to line 37, column 5)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 30, column 4 to line 37, column 5)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 39, column 4 to column 20)",
- " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 4, column 56 to line 40, column 3)"};
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 8, column 22 to column 23)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 8, column 11 to column 12)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 8, column 13 to column 14)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 8, column 4 to column 25)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 9, column 11 to column 12)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 9, column 4 to column 21)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 12, column 6 to column 29)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 16, column 10 to column 41)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 15, column 23 to line 17, column 9)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 15, column 8 to line 17, column 9)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 14, column 21 to line 18, column 7)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 14, column 6 to line 18, column 7)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 11, column 19 to line 19, column 5)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 11, column 4 to line 19, column 5)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 21, column 24 to column 25)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 21, column 11 to column 12)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 21, column 4 to column 27)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 22, column 13 to column 14)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 22, column 4 to column 16)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 25, column 6 to column 48)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 24, column 18 to line 26, column 5)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 24, column 4 to line 26, column 5)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 31, column 10 to column 68)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 30, column 23 to line 32, column 9)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 30, column 8 to line 32, column 9)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 33, column 8 to column 43)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 29, column 21 to line 34, column 7)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 29, column 6 to line 34, column 7)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 28, column 19 to line 35, column 5)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 28, column 4 to line 35, column 5)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 37, column 4 to column 21)",
+ " (in '/Users/marcpabst/Documents/Repositories/bayesian-mice-decisions/stan-models/glm-hmm.stan', line 3, column 56 to line 38, column 3)"};
 
 
 template <typename T0__, typename T1__, typename T2__>
@@ -129,39 +161,39 @@ forward(const T0__& log_b_arg__,
     int K;
     K = std::numeric_limits<int>::min();
     
-    current_statement__ = 55;
+    current_statement__ = 87;
     K = rvalue(dims(log_b), "dims(log_b)", index_uni(1));
     int T;
     T = std::numeric_limits<int>::min();
     
-    current_statement__ = 56;
+    current_statement__ = 88;
     T = rvalue(dims(log_b), "dims(log_b)", index_uni(2));
-    current_statement__ = 57;
+    current_statement__ = 89;
     validate_non_negative_index("log_A", "T", T);
-    current_statement__ = 58;
+    current_statement__ = 90;
     validate_non_negative_index("log_A", "K", K);
-    current_statement__ = 59;
+    current_statement__ = 91;
     validate_non_negative_index("log_A", "K", K);
     std::vector<Eigen::Matrix<local_scalar_t__, -1, -1>> log_A;
     log_A = std::vector<Eigen::Matrix<local_scalar_t__, -1, -1>>(T, Eigen::Matrix<local_scalar_t__, -1, -1>(K, K));
     stan::math::fill(log_A, DUMMY_VAR__);
     
-    current_statement__ = 61;
+    current_statement__ = 93;
     validate_non_negative_index("log_pi", "K", K);
     Eigen::Matrix<local_scalar_t__, -1, 1> log_pi;
     log_pi = Eigen::Matrix<local_scalar_t__, -1, 1>(K);
     stan::math::fill(log_pi, DUMMY_VAR__);
     
-    current_statement__ = 70;
+    current_statement__ = 102;
     for (int i = 1; i <= K; ++i) {
-      current_statement__ = 63;
+      current_statement__ = 95;
       assign(log_pi, stan::math::log(rvalue(pi, "pi", index_uni(i))),
         "assigning variable log_pi", index_uni(i));
-      current_statement__ = 68;
+      current_statement__ = 100;
       for (int j = 1; j <= K; ++j) {
-        current_statement__ = 66;
+        current_statement__ = 98;
         for (int t = 1; t <= T; ++t) {
-          current_statement__ = 64;
+          current_statement__ = 96;
           assign(log_A,
             stan::math::log(
               rvalue(rvalue(A, "A", index_uni(t)), "A[t]",
@@ -171,49 +203,49 @@ forward(const T0__& log_b_arg__,
         }
       }
     }
-    current_statement__ = 71;
-    validate_non_negative_index("logalpha", "K", K);
-    current_statement__ = 72;
-    validate_non_negative_index("logalpha", "T", T);
-    std::vector<Eigen::Matrix<local_scalar_t__, -1, 1>> logalpha;
-    logalpha = std::vector<Eigen::Matrix<local_scalar_t__, -1, 1>>(K, Eigen::Matrix<local_scalar_t__, -1, 1>(T));
-    stan::math::fill(logalpha, DUMMY_VAR__);
+    current_statement__ = 103;
+    validate_non_negative_index("log_alpha", "K", K);
+    current_statement__ = 104;
+    validate_non_negative_index("log_alpha", "T", T);
+    std::vector<Eigen::Matrix<local_scalar_t__, -1, 1>> log_alpha;
+    log_alpha = std::vector<Eigen::Matrix<local_scalar_t__, -1, 1>>(K, Eigen::Matrix<local_scalar_t__, -1, 1>(T));
+    stan::math::fill(log_alpha, DUMMY_VAR__);
     
-    current_statement__ = 74;
+    current_statement__ = 106;
     validate_non_negative_index("acc", "K", K);
     std::vector<local_scalar_t__> acc;
     acc = std::vector<local_scalar_t__>(K, DUMMY_VAR__);
     
-    current_statement__ = 78;
+    current_statement__ = 110;
     for (int j = 1; j <= K; ++j) {
-      current_statement__ = 76;
-      assign(logalpha,
+      current_statement__ = 108;
+      assign(log_alpha,
         (rvalue(log_pi, "log_pi", index_uni(j)) +
           rvalue(log_b, "log_b", index_uni(j), index_uni(1))),
-        "assigning variable logalpha", index_uni(j), index_uni(1));
+        "assigning variable log_alpha", index_uni(j), index_uni(1));
     }
-    current_statement__ = 86;
+    current_statement__ = 118;
     for (int t = 2; t <= T; ++t) {
-      current_statement__ = 84;
+      current_statement__ = 116;
       for (int j = 1; j <= K; ++j) {
-        current_statement__ = 81;
+        current_statement__ = 113;
         for (int i = 1; i <= K; ++i) {
-          current_statement__ = 79;
+          current_statement__ = 111;
           assign(acc,
-            ((rvalue(logalpha, "logalpha", index_uni(i), index_uni((t - 1)))
-               +
+            ((rvalue(log_alpha, "log_alpha",
+                index_uni(i), index_uni((t - 1))) +
                rvalue(rvalue(log_A, "log_A", index_uni(t)), "log_A[t]",
                  index_uni(i), index_uni(j))) +
               rvalue(log_b, "log_b", index_uni(j), index_uni(t))),
             "assigning variable acc", index_uni(i));
         }
-        current_statement__ = 82;
-        assign(logalpha, log_sum_exp(acc),
-          "assigning variable logalpha", index_uni(j), index_uni(t));
+        current_statement__ = 114;
+        assign(log_alpha, log_sum_exp(acc),
+          "assigning variable log_alpha", index_uni(j), index_uni(t));
       }
     }
-    current_statement__ = 87;
-    return logalpha;
+    current_statement__ = 119;
+    return log_alpha;
   } catch (const std::exception& e) {
     stan::lang::rethrow_located(e, locations_array__[current_statement__]);
       // Next line prevents compiler griping about no return
@@ -274,74 +306,74 @@ class glm_hmm_model final : public model_base_crtp<glm_hmm_model> {
       pos__ = std::numeric_limits<int>::min();
       
       pos__ = 1;
-      current_statement__ = 37;
+      current_statement__ = 67;
       context__.validate_dims("data initialization","N","int",
            std::vector<size_t>{});
       N = std::numeric_limits<int>::min();
       
-      current_statement__ = 37;
+      current_statement__ = 67;
       N = context__.vals_i("N")[(1 - 1)];
-      current_statement__ = 37;
+      current_statement__ = 67;
       check_greater_or_equal(function__, "N", N, 1);
-      current_statement__ = 38;
+      current_statement__ = 68;
       validate_non_negative_index("T", "N", N);
-      current_statement__ = 39;
+      current_statement__ = 69;
       context__.validate_dims("data initialization","T","int",
            std::vector<size_t>{static_cast<size_t>(N)});
       T = std::vector<int>(N, std::numeric_limits<int>::min());
       
-      current_statement__ = 39;
+      current_statement__ = 69;
       T = context__.vals_i("T");
-      current_statement__ = 40;
+      current_statement__ = 70;
       context__.validate_dims("data initialization","K","int",
            std::vector<size_t>{});
       K = std::numeric_limits<int>::min();
       
-      current_statement__ = 40;
+      current_statement__ = 70;
       K = context__.vals_i("K")[(1 - 1)];
-      current_statement__ = 40;
+      current_statement__ = 70;
       check_greater_or_equal(function__, "K", K, 1);
-      current_statement__ = 41;
+      current_statement__ = 71;
       context__.validate_dims("data initialization","I","int",
            std::vector<size_t>{});
       I = std::numeric_limits<int>::min();
       
-      current_statement__ = 41;
+      current_statement__ = 71;
       I = context__.vals_i("I")[(1 - 1)];
-      current_statement__ = 41;
+      current_statement__ = 71;
       check_greater_or_equal(function__, "I", I, 0);
-      current_statement__ = 42;
+      current_statement__ = 72;
       context__.validate_dims("data initialization","R","int",
            std::vector<size_t>{});
       R = std::numeric_limits<int>::min();
       
-      current_statement__ = 42;
+      current_statement__ = 72;
       R = context__.vals_i("R")[(1 - 1)];
-      current_statement__ = 42;
+      current_statement__ = 72;
       check_greater_or_equal(function__, "R", R, 1);
-      current_statement__ = 43;
+      current_statement__ = 73;
       context__.validate_dims("data initialization","M","int",
            std::vector<size_t>{});
       M = std::numeric_limits<int>::min();
       
-      current_statement__ = 43;
+      current_statement__ = 73;
       M = context__.vals_i("M")[(1 - 1)];
-      current_statement__ = 43;
+      current_statement__ = 73;
       check_greater_or_equal(function__, "M", M, 1);
-      current_statement__ = 44;
+      current_statement__ = 74;
       validate_non_negative_index("y", "I", I);
-      current_statement__ = 45;
+      current_statement__ = 75;
       context__.validate_dims("data initialization","y","int",
            std::vector<size_t>{static_cast<size_t>(I)});
       y = std::vector<int>(I, std::numeric_limits<int>::min());
       
-      current_statement__ = 45;
+      current_statement__ = 75;
       y = context__.vals_i("y");
-      current_statement__ = 46;
+      current_statement__ = 76;
       validate_non_negative_index("x", "I", I);
-      current_statement__ = 47;
+      current_statement__ = 77;
       validate_non_negative_index("x", "M", M);
-      current_statement__ = 48;
+      current_statement__ = 78;
       context__.validate_dims("data initialization","x","double",
            std::vector<size_t>{static_cast<size_t>(I),
             static_cast<size_t>(M)});
@@ -350,34 +382,38 @@ class glm_hmm_model final : public model_base_crtp<glm_hmm_model> {
       
       {
         std::vector<local_scalar_t__> x_flat__;
-        current_statement__ = 48;
+        current_statement__ = 78;
         x_flat__ = context__.vals_r("x");
-        current_statement__ = 48;
+        current_statement__ = 78;
         pos__ = 1;
-        current_statement__ = 48;
+        current_statement__ = 78;
         for (int sym1__ = 1; sym1__ <= M; ++sym1__) {
-          current_statement__ = 48;
+          current_statement__ = 78;
           for (int sym2__ = 1; sym2__ <= I; ++sym2__) {
-            current_statement__ = 48;
+            current_statement__ = 78;
             assign(x, x_flat__[(pos__ - 1)],
               "assigning variable x", index_uni(sym2__), index_uni(sym1__));
-            current_statement__ = 48;
+            current_statement__ = 78;
             pos__ = (pos__ + 1);
           }
         }
       }
-      current_statement__ = 49;
+      current_statement__ = 79;
       validate_positive_index("pi", "K", K);
-      current_statement__ = 50;
+      current_statement__ = 80;
       validate_non_negative_index("betas_x", "K", K);
-      current_statement__ = 51;
+      current_statement__ = 81;
       validate_non_negative_index("betas_x", "M", M);
-      current_statement__ = 52;
-      validate_non_negative_index("baseA", "K", K);
-      current_statement__ = 53;
-      validate_positive_index("baseA", "K", K);
-      current_statement__ = 54;
+      current_statement__ = 82;
+      validate_non_negative_index("A", "K", K);
+      current_statement__ = 83;
+      validate_positive_index("A", "K", K);
+      current_statement__ = 84;
       validate_non_negative_index("log_like_sess", "N", N);
+      current_statement__ = 85;
+      validate_non_negative_index("zpred", "I", I);
+      current_statement__ = 86;
+      validate_non_negative_index("ypred", "I", I);
     } catch (const std::exception& e) {
       stan::lang::rethrow_located(e, locations_array__[current_statement__]);
       // Next line prevents compiler griping about no return
@@ -419,13 +455,13 @@ class glm_hmm_model final : public model_base_crtp<glm_hmm_model> {
       current_statement__ = 2;
       betas_x = in__.template read<std::vector<Eigen::Matrix<local_scalar_t__, -1, 1>>>(
                   K, M);
-      std::vector<Eigen::Matrix<local_scalar_t__, -1, 1>> baseA;
-      baseA = std::vector<Eigen::Matrix<local_scalar_t__, -1, 1>>(K, Eigen::Matrix<local_scalar_t__, -1, 1>(K));
-      stan::math::fill(baseA, DUMMY_VAR__);
+      std::vector<Eigen::Matrix<local_scalar_t__, -1, 1>> A;
+      A = std::vector<Eigen::Matrix<local_scalar_t__, -1, 1>>(K, Eigen::Matrix<local_scalar_t__, -1, 1>(K));
+      stan::math::fill(A, DUMMY_VAR__);
       
       current_statement__ = 3;
-      baseA = in__.template read_constrain_simplex<std::vector<Eigen::Matrix<local_scalar_t__, -1, 1>>, jacobian__>(
-                lp__, K, K);
+      A = in__.template read_constrain_simplex<std::vector<Eigen::Matrix<local_scalar_t__, -1, 1>>, jacobian__>(
+            lp__, K, K);
       Eigen::Matrix<local_scalar_t__, -1, 1> log_like_sess;
       log_like_sess = Eigen::Matrix<local_scalar_t__, -1, 1>(N);
       stan::math::fill(log_like_sess, DUMMY_VAR__);
@@ -485,8 +521,7 @@ class glm_hmm_model final : public model_base_crtp<glm_hmm_model> {
             for (int i = 1; i <= K; ++i) {
               current_statement__ = 19;
               assign(A_,
-                to_row_vector(
-                  rvalue(baseA, "baseA", index_uni(i), index_omni())),
+                to_row_vector(rvalue(A, "A", index_uni(i), index_omni())),
                 "assigning variable A_", index_uni(t), index_uni(i),
                                            index_omni());
               current_statement__ = 20;
@@ -508,21 +543,20 @@ class glm_hmm_model final : public model_base_crtp<glm_hmm_model> {
         }
       }
       {
-        current_statement__ = 33;
+        current_statement__ = 63;
         for (int k = 1; k <= K; ++k) {
-          current_statement__ = 30;
+          current_statement__ = 60;
           lp_accum__.add(
             dirichlet_lpdf<propto__>(
-              rvalue(baseA, "baseA", index_uni(k), index_omni()),
-              (Eigen::Matrix<double,1,-1>(2) << 1, 10).finished()));
-          current_statement__ = 31;
+              rvalue(A, "A", index_uni(k), index_omni()), rep_vector(1, K)));
+          current_statement__ = 61;
           lp_accum__.add(
             normal_lpdf<propto__>(rvalue(betas_x, "betas_x", index_uni(k)),
               0, 2));
         }
-        current_statement__ = 36;
+        current_statement__ = 66;
         for (int n = 1; n <= N; ++n) {
-          current_statement__ = 34;
+          current_statement__ = 64;
           lp_accum__.add(rvalue(log_like_sess, "log_like_sess", index_uni(n)));
         }
       }
@@ -574,13 +608,13 @@ class glm_hmm_model final : public model_base_crtp<glm_hmm_model> {
       current_statement__ = 2;
       betas_x = in__.template read<std::vector<Eigen::Matrix<local_scalar_t__, -1, 1>>>(
                   K, M);
-      std::vector<Eigen::Matrix<double, -1, 1>> baseA;
-      baseA = std::vector<Eigen::Matrix<double, -1, 1>>(K, Eigen::Matrix<double, -1, 1>(K));
-      stan::math::fill(baseA, std::numeric_limits<double>::quiet_NaN());
+      std::vector<Eigen::Matrix<double, -1, 1>> A;
+      A = std::vector<Eigen::Matrix<double, -1, 1>>(K, Eigen::Matrix<double, -1, 1>(K));
+      stan::math::fill(A, std::numeric_limits<double>::quiet_NaN());
       
       current_statement__ = 3;
-      baseA = in__.template read_constrain_simplex<std::vector<Eigen::Matrix<local_scalar_t__, -1, 1>>, jacobian__>(
-                lp__, K, K);
+      A = in__.template read_constrain_simplex<std::vector<Eigen::Matrix<local_scalar_t__, -1, 1>>, jacobian__>(
+            lp__, K, K);
       Eigen::Matrix<double, -1, 1> log_like_sess;
       log_like_sess = Eigen::Matrix<double, -1, 1>(N);
       stan::math::fill(log_like_sess, std::numeric_limits<double>::quiet_NaN());
@@ -596,7 +630,7 @@ class glm_hmm_model final : public model_base_crtp<glm_hmm_model> {
       }
       for (int sym1__ = 1; sym1__ <= K; ++sym1__) {
         for (int sym2__ = 1; sym2__ <= K; ++sym2__) {
-          vars__.emplace_back(baseA[(sym2__ - 1)][(sym1__ - 1)]);
+          vars__.emplace_back(A[(sym2__ - 1)][(sym1__ - 1)]);
         }
       }
       if (logical_negation((primitive_value(emit_transformed_parameters__) ||
@@ -658,8 +692,7 @@ class glm_hmm_model final : public model_base_crtp<glm_hmm_model> {
             for (int i = 1; i <= K; ++i) {
               current_statement__ = 19;
               assign(A_,
-                to_row_vector(
-                  rvalue(baseA, "baseA", index_uni(i), index_omni())),
+                to_row_vector(rvalue(A, "A", index_uni(i), index_omni())),
                 "assigning variable A_", index_uni(t), index_uni(i),
                                            index_omni());
               current_statement__ = 20;
@@ -688,6 +721,104 @@ class glm_hmm_model final : public model_base_crtp<glm_hmm_model> {
       if (logical_negation(emit_generated_quantities__)) {
         return ;
       } 
+      std::vector<int> zpred;
+      zpred = std::vector<int>(I, std::numeric_limits<int>::min());
+      
+      std::vector<int> ypred;
+      ypred = std::vector<int>(I, std::numeric_limits<int>::min());
+      
+      {
+        int pos;
+        pos = std::numeric_limits<int>::min();
+        
+        current_statement__ = 32;
+        pos = 1;
+        current_statement__ = 58;
+        for (int n = 1; n <= N; ++n) {
+          int T_;
+          T_ = std::numeric_limits<int>::min();
+          
+          current_statement__ = 33;
+          T_ = rvalue(T, "T", index_uni(n));
+          current_statement__ = 34;
+          validate_non_negative_index("x_", "T_", T_);
+          current_statement__ = 35;
+          validate_non_negative_index("x_", "M", M);
+          Eigen::Matrix<double, -1, -1> x_;
+          x_ = Eigen::Matrix<double, -1, -1>(T_, M);
+          stan::math::fill(x_, std::numeric_limits<double>::quiet_NaN());
+          
+          current_statement__ = 36;
+          assign(x_, block(x, pos, 1, T_, M), "assigning variable x_");
+          current_statement__ = 37;
+          validate_non_negative_index("A_", "T_", T_);
+          current_statement__ = 38;
+          validate_non_negative_index("A_", "K", K);
+          current_statement__ = 39;
+          validate_non_negative_index("A_", "K", K);
+          std::vector<Eigen::Matrix<double, -1, -1>> A_;
+          A_ = std::vector<Eigen::Matrix<double, -1, -1>>(T_, Eigen::Matrix<double, -1, -1>(K, K));
+          stan::math::fill(A_, std::numeric_limits<double>::quiet_NaN());
+          
+          current_statement__ = 41;
+          validate_non_negative_index("y_", "T_", T_);
+          std::vector<int> y_;
+          y_ = std::vector<int>(T_, std::numeric_limits<int>::min());
+          
+          current_statement__ = 42;
+          assign(y_, rvalue(y, "y", index_min_max(pos, ((pos + T_) - 1))),
+            "assigning variable y_");
+          current_statement__ = 43;
+          validate_non_negative_index("logb_", "K", K);
+          current_statement__ = 44;
+          validate_non_negative_index("logb_", "T_", T_);
+          Eigen::Matrix<double, -1, -1> logb_;
+          logb_ = Eigen::Matrix<double, -1, -1>(K, T_);
+          stan::math::fill(logb_, std::numeric_limits<double>::quiet_NaN());
+          
+          current_statement__ = 51;
+          for (int t = 1; t <= T_; ++t) {
+            current_statement__ = 49;
+            for (int i = 1; i <= K; ++i) {
+              current_statement__ = 46;
+              assign(A_,
+                to_row_vector(rvalue(A, "A", index_uni(i), index_omni())),
+                "assigning variable A_", index_uni(t), index_uni(i),
+                                           index_omni());
+              current_statement__ = 47;
+              assign(logb_,
+                bernoulli_logit_lpmf<false>(rvalue(y_, "y_", index_uni(t)),
+                  multiply(rvalue(x_, "x_", index_uni(t)),
+                    rvalue(betas_x, "betas_x", index_uni(i)))),
+                "assigning variable logb_", index_uni(i), index_uni(t));
+            }
+          }
+          current_statement__ = 52;
+          assign(zpred,
+            hmm_latent_rng(logb_, rvalue(A_, "A_", index_uni(1)), pi,
+              base_rng__),
+            "assigning variable zpred", index_min_max(pos, ((pos + T_) - 1)));
+          current_statement__ = 55;
+          for (int t = 1; t <= T_; ++t) {
+            current_statement__ = 53;
+            assign(ypred,
+              bernoulli_logit_rng(
+                multiply(rvalue(x_, "x_", index_uni(t)),
+                  rvalue(betas_x, "betas_x",
+                    index_uni(rvalue(zpred, "zpred",
+                                index_uni(((pos + t) - 1)))))), base_rng__),
+              "assigning variable ypred", index_uni(((pos + t) - 1)));
+          }
+          current_statement__ = 56;
+          pos = (pos + T_);
+        }
+      }
+      for (int sym1__ = 1; sym1__ <= I; ++sym1__) {
+        vars__.emplace_back(zpred[(sym1__ - 1)]);
+      }
+      for (int sym1__ = 1; sym1__ <= I; ++sym1__) {
+        vars__.emplace_back(ypred[(sym1__ - 1)]);
+      }
     } catch (const std::exception& e) {
       stan::lang::rethrow_located(e, locations_array__[current_statement__]);
       // Next line prevents compiler griping about no return
@@ -760,14 +891,14 @@ class glm_hmm_model final : public model_base_crtp<glm_hmm_model> {
           }
         }
       }
-      std::vector<Eigen::Matrix<double, -1, 1>> baseA;
-      baseA = std::vector<Eigen::Matrix<double, -1, 1>>(K, Eigen::Matrix<double, -1, 1>(K));
-      stan::math::fill(baseA, std::numeric_limits<double>::quiet_NaN());
+      std::vector<Eigen::Matrix<double, -1, 1>> A;
+      A = std::vector<Eigen::Matrix<double, -1, 1>>(K, Eigen::Matrix<double, -1, 1>(K));
+      stan::math::fill(A, std::numeric_limits<double>::quiet_NaN());
       
       {
-        std::vector<local_scalar_t__> baseA_flat__;
+        std::vector<local_scalar_t__> A_flat__;
         current_statement__ = 3;
-        baseA_flat__ = context__.vals_r("baseA");
+        A_flat__ = context__.vals_r("A");
         current_statement__ = 3;
         pos__ = 1;
         current_statement__ = 3;
@@ -775,25 +906,23 @@ class glm_hmm_model final : public model_base_crtp<glm_hmm_model> {
           current_statement__ = 3;
           for (int sym2__ = 1; sym2__ <= K; ++sym2__) {
             current_statement__ = 3;
-            assign(baseA, baseA_flat__[(pos__ - 1)],
-              "assigning variable baseA", index_uni(sym2__),
-                                            index_uni(sym1__));
+            assign(A, A_flat__[(pos__ - 1)],
+              "assigning variable A", index_uni(sym2__), index_uni(sym1__));
             current_statement__ = 3;
             pos__ = (pos__ + 1);
           }
         }
       }
-      std::vector<Eigen::Matrix<double, -1, 1>> baseA_free__;
-      baseA_free__ = std::vector<Eigen::Matrix<double, -1, 1>>(K, Eigen::Matrix<double, -1, 1>(
+      std::vector<Eigen::Matrix<double, -1, 1>> A_free__;
+      A_free__ = std::vector<Eigen::Matrix<double, -1, 1>>(K, Eigen::Matrix<double, -1, 1>(
         (K - 1)));
-      stan::math::fill(baseA_free__, std::numeric_limits<double>::quiet_NaN());
-      
+      stan::math::fill(A_free__, std::numeric_limits<double>::quiet_NaN());
       
       current_statement__ = 3;
       for (int sym1__ = 1; sym1__ <= K; ++sym1__) {
         current_statement__ = 3;
-        assign(baseA_free__, stan::math::simplex_free(baseA[(sym1__ - 1)]),
-          "assigning variable baseA_free__", index_uni(sym1__));
+        assign(A_free__, stan::math::simplex_free(A[(sym1__ - 1)]),
+          "assigning variable A_free__", index_uni(sym1__));
       }
       for (int sym1__ = 1; sym1__ <= (K - 1); ++sym1__) {
         vars__.emplace_back(pi_free__[(sym1__ - 1)]);
@@ -805,7 +934,7 @@ class glm_hmm_model final : public model_base_crtp<glm_hmm_model> {
       }
       for (int sym1__ = 1; sym1__ <= K; ++sym1__) {
         for (int sym2__ = 1; sym2__ <= (K - 1); ++sym2__) {
-          vars__.emplace_back(baseA_free__[(sym1__ - 1)][(sym2__ - 1)]);
+          vars__.emplace_back(A_free__[(sym1__ - 1)][(sym2__ - 1)]);
         }
       }
     } catch (const std::exception& e) {
@@ -817,8 +946,8 @@ class glm_hmm_model final : public model_base_crtp<glm_hmm_model> {
     
   inline void get_param_names(std::vector<std::string>& names__) const {
     
-    names__ = std::vector<std::string>{"pi", "betas_x", "baseA",
-      "log_like_sess"};
+    names__ = std::vector<std::string>{"pi", "betas_x", "A", "log_like_sess",
+      "zpred", "ypred"};
     
     } // get_param_names() 
     
@@ -829,7 +958,9 @@ class glm_hmm_model final : public model_base_crtp<glm_hmm_model> {
                                                                    },
       std::vector<size_t>{static_cast<size_t>(K), static_cast<size_t>(M)},
       std::vector<size_t>{static_cast<size_t>(K), static_cast<size_t>(K)},
-      std::vector<size_t>{static_cast<size_t>(N)}};
+      std::vector<size_t>{static_cast<size_t>(N)},
+      std::vector<size_t>{static_cast<size_t>(I)},
+      std::vector<size_t>{static_cast<size_t>(I)}};
     
     } // get_dims() 
     
@@ -857,7 +988,7 @@ class glm_hmm_model final : public model_base_crtp<glm_hmm_model> {
       {
         for (int sym2__ = 1; sym2__ <= K; ++sym2__) {
           {
-            param_names__.emplace_back(std::string() + "baseA" + '.' + std::to_string(sym2__) + '.' + std::to_string(sym1__));
+            param_names__.emplace_back(std::string() + "A" + '.' + std::to_string(sym2__) + '.' + std::to_string(sym1__));
           } 
         }
       } 
@@ -871,7 +1002,16 @@ class glm_hmm_model final : public model_base_crtp<glm_hmm_model> {
     }
     
     if (emit_generated_quantities__) {
-      
+      for (int sym1__ = 1; sym1__ <= I; ++sym1__) {
+        {
+          param_names__.emplace_back(std::string() + "zpred" + '.' + std::to_string(sym1__));
+        } 
+      }
+      for (int sym1__ = 1; sym1__ <= I; ++sym1__) {
+        {
+          param_names__.emplace_back(std::string() + "ypred" + '.' + std::to_string(sym1__));
+        } 
+      }
     }
     
     } // constrained_param_names() 
@@ -900,7 +1040,7 @@ class glm_hmm_model final : public model_base_crtp<glm_hmm_model> {
       {
         for (int sym2__ = 1; sym2__ <= K; ++sym2__) {
           {
-            param_names__.emplace_back(std::string() + "baseA" + '.' + std::to_string(sym2__) + '.' + std::to_string(sym1__));
+            param_names__.emplace_back(std::string() + "A" + '.' + std::to_string(sym2__) + '.' + std::to_string(sym1__));
           } 
         }
       } 
@@ -914,20 +1054,29 @@ class glm_hmm_model final : public model_base_crtp<glm_hmm_model> {
     }
     
     if (emit_generated_quantities__) {
-      
+      for (int sym1__ = 1; sym1__ <= I; ++sym1__) {
+        {
+          param_names__.emplace_back(std::string() + "zpred" + '.' + std::to_string(sym1__));
+        } 
+      }
+      for (int sym1__ = 1; sym1__ <= I; ++sym1__) {
+        {
+          param_names__.emplace_back(std::string() + "ypred" + '.' + std::to_string(sym1__));
+        } 
+      }
     }
     
     } // unconstrained_param_names() 
     
   inline std::string get_constrained_sizedtypes() const {
     
-    return std::string("[{\"name\":\"pi\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(K) + "},\"block\":\"parameters\"},{\"name\":\"betas_x\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(K) + ",\"element_type\":{\"name\":\"vector\",\"length\":" + std::to_string(M) + "}},\"block\":\"parameters\"},{\"name\":\"baseA\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(K) + ",\"element_type\":{\"name\":\"vector\",\"length\":" + std::to_string(K) + "}},\"block\":\"parameters\"},{\"name\":\"log_like_sess\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(N) + "},\"block\":\"transformed_parameters\"}]");
+    return std::string("[{\"name\":\"pi\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(K) + "},\"block\":\"parameters\"},{\"name\":\"betas_x\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(K) + ",\"element_type\":{\"name\":\"vector\",\"length\":" + std::to_string(M) + "}},\"block\":\"parameters\"},{\"name\":\"A\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(K) + ",\"element_type\":{\"name\":\"vector\",\"length\":" + std::to_string(K) + "}},\"block\":\"parameters\"},{\"name\":\"log_like_sess\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(N) + "},\"block\":\"transformed_parameters\"},{\"name\":\"zpred\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(I) + ",\"element_type\":{\"name\":\"int\"}},\"block\":\"generated_quantities\"},{\"name\":\"ypred\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(I) + ",\"element_type\":{\"name\":\"int\"}},\"block\":\"generated_quantities\"}]");
     
     } // get_constrained_sizedtypes() 
     
   inline std::string get_unconstrained_sizedtypes() const {
     
-    return std::string("[{\"name\":\"pi\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string((K - 1)) + "},\"block\":\"parameters\"},{\"name\":\"betas_x\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(K) + ",\"element_type\":{\"name\":\"vector\",\"length\":" + std::to_string(M) + "}},\"block\":\"parameters\"},{\"name\":\"baseA\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(K) + ",\"element_type\":{\"name\":\"vector\",\"length\":" + std::to_string((K - 1)) + "}},\"block\":\"parameters\"},{\"name\":\"log_like_sess\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(N) + "},\"block\":\"transformed_parameters\"}]");
+    return std::string("[{\"name\":\"pi\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string((K - 1)) + "},\"block\":\"parameters\"},{\"name\":\"betas_x\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(K) + ",\"element_type\":{\"name\":\"vector\",\"length\":" + std::to_string(M) + "}},\"block\":\"parameters\"},{\"name\":\"A\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(K) + ",\"element_type\":{\"name\":\"vector\",\"length\":" + std::to_string((K - 1)) + "}},\"block\":\"parameters\"},{\"name\":\"log_like_sess\",\"type\":{\"name\":\"vector\",\"length\":" + std::to_string(N) + "},\"block\":\"transformed_parameters\"},{\"name\":\"zpred\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(I) + ",\"element_type\":{\"name\":\"int\"}},\"block\":\"generated_quantities\"},{\"name\":\"ypred\",\"type\":{\"name\":\"array\",\"length\":" + std::to_string(I) + ",\"element_type\":{\"name\":\"int\"}},\"block\":\"generated_quantities\"}]");
     
     } // get_unconstrained_sizedtypes() 
     
